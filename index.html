@@ -1,10 +1,11 @@
 <html>
   <head>
+    <title>Saikou : totally the best app on android</title>
     <meta name="viewport" content="width=device-width" />
   </head>
   <body style="margin: 0;background: #000;">
     <center>
-      <video controls autoplay="true" name="media">
+      <video id="video" muted="muted" style="height: 100%;" name="media">
         <source
           src="https://shattereddisk.github.io/rickroll/rickroll.mp4"
           type="video/mp4"
@@ -12,4 +13,11 @@
       </video>
     </center>
   </body>
+  <script>
+  document.body.addEventListener('click', () => {
+    var video = document.getElementById('video')
+    video.muted = false;
+    video.play()
+  });
+  </script>
 </html>
